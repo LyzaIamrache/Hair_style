@@ -1,0 +1,26 @@
+[
+  {
+    "hairstyle": "curly bob hairstyle",
+    "hair_color": "dark brown",
+    "makeup_style": "soft glam makeup",
+    "occasion": "a wedding"
+  },
+  {
+    "hairstyle": "long straight hair",
+    "hair_color": "black",
+    "makeup_style": "bold evening makeup",
+    "occasion": "an evening party"
+  },
+  {
+    "hairstyle": "loose wavy hair",
+    "hair_color": "blonde",
+    "makeup_style": "natural makeup",
+    "occasion": "a casual outing"
+  },
+  {
+    "hairstyle": "high ponytail",
+    "hair_color": "red",
+    "makeup_style": "light office makeup",
+    "occasion": "an office day"
+  }
+]
