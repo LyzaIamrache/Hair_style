@@ -7,7 +7,8 @@ import torch
 # Configuration
 # -----------------------------
 MODEL_ID = "runwayml/stable-diffusion-v1-5"
-OUTPUT_DIR = "outputs"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.join(BASE_DIR, "outputs")
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 NEGATIVE_PROMPT = (
@@ -48,7 +49,9 @@ def main():
     )
     pipe = pipe.to(DEVICE)
 
-    inputs = load_inputs("sample_inputs.json")
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    input_path = os.path.join(base_dir, "sample_inputs.json")
+    inputs = load_inputs(input_path)
 
     for idx, item in enumerate(inputs, start=1):
         print(f"\nGenerating images for case {idx}...")
@@ -67,13 +70,15 @@ def main():
 
         for version_name, prompt_data in prompt_versions.items():
             for image_num in range(1, 3):  # generate 2 images per version
+                generator = torch.Generator(device=DEVICE).manual_seed(42 + image_num)
+
                 result = pipe(
                     prompt=prompt_data["prompt"],
                     negative_prompt=prompt_data["negative_prompt"],
                     num_inference_steps=30,
-                    guidance_scale=7.5
-                )
-
+                    guidance_scale=7.5,
+                    generator=generator
+               )
                 image = result.images[0]
                 filename = f"case{idx}_{version_name}_{image_num}.png"
                 filepath = os.path.join(OUTPUT_DIR, filename)
