@@ -39,14 +39,11 @@ The system takes the following structured inputs:
    * diversity
    * visual quality
 
-## Control Mechanisms
-
-This project uses:
-
-* structured prompt templates
-* negative prompts
-
 ## Example Prompt
+
+### Naive Prompt
+
+A woman with curly brown hair
 
 ### Structured Prompt
 
