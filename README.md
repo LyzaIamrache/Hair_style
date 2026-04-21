@@ -21,7 +21,13 @@ The system takes the following structured inputs:
 * hair color
 * makeup style
 * occasion
+* 
+## Control Mechanisms
 
+This project uses:
+- structured prompt templates
+- negative prompts
+  
 ## Methodology
 
 1. Load structured input from a JSON file
