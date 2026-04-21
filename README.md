@@ -45,7 +45,7 @@ This project uses:
    * diversity
    * visual quality
 
-## Example Prompt
+## Example Prompts
 
 ### Naive Prompt
 
@@ -96,3 +96,4 @@ Generated images are saved in the `outputs/` folder.
 ## Conclusion
 
 This project demonstrates that structured prompts and negative prompts significantly improve control and quality in AI image generation.
+
