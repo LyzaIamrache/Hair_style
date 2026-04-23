@@ -5,17 +5,18 @@
     "makeup_style": "soft glam makeup",
     "occasion": "a wedding"
   },
-  {
-    "hairstyle": "long straight hair",
-    "hair_color": "black",
-    "makeup_style": "bold evening makeup",
-    "occasion": "an evening party"
-  },
+  
   {
     "hairstyle": "loose wavy hair",
     "hair_color": "blonde",
     "makeup_style": "natural makeup",
     "occasion": "a casual outing"
+  },
+{
+    "hairstyle": "long straight hair",
+    "hair_color": "black",
+    "makeup_style": "bold evening makeup",
+    "occasion": "an evening party"
   },
   {
     "hairstyle": "high ponytail",
